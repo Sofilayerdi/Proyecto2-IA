@@ -1,0 +1,13 @@
+{
+  "regresion_logistica": {
+    "modelo__C": 0.01,
+    "modelo__class_weight": "balanced"
+  },
+  "arbol_decision": {
+    "class_weight": null,
+    "criterion": "entropy",
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "min_samples_split": 25
+  }
+}
