@@ -1,0 +1,14 @@
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Datos: se versiona solo el .zip original; el CSV descomprimido no
+data/raw/*.csv
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
