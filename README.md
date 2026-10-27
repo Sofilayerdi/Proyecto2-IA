@@ -4,6 +4,21 @@ Proyecto 2, Inteligencia Artificial, UVG.
 
 Clasificamos a una persona en **sin diabetes, prediabetes o diabetes** (`Diabetes_012`) a partir de 21 indicadores de salud, hábitos y variables sociodemográficas de la encuesta BRFSS 2015 del CDC. La métrica principal es el **F1-score macro**.
 
+**Resultado:** el mejor modelo es un random forest, con F1 macro de 0.438 en el conjunto de prueba (el baseline trivial obtiene 0.305). Detecta al 70% de las personas con diabetes, pero casi no detecta prediabetes.
+
+## Entregables
+
+| Archivo | Qué contiene |
+|---|---|
+| `Informe-Proyecto2.docx` | Informe final: problema, objetivos, datos, análisis exploratorio, decisiones de preprocesamiento, comparación de modelos, evaluación en prueba, análisis de errores, limitaciones, conclusiones, uso de IA y referencias. |
+| `Presentacion-Proyecto2.pptx` | Presentación de 13 diapositivas; cada una tiene notas del orador con datos de apoyo. |
+| `notebooks/01_EDA.ipynb` | Diccionario de variables, análisis exploratorio (desbalance, outliers, correlaciones, factores de riesgo), decisiones de preprocesamiento y creación de la partición train/test. |
+| `notebooks/02_Baselines_Arbol.ipynb` | Baseline trivial, regresión logística y árbol de decisión con búsqueda de hiperparámetros, análisis de sobreajuste del árbol por profundidad e importancia de variables. |
+| `notebooks/03_Modelos_Evaluacion.ipynb` | Random forest y gradient boosting con búsqueda de hiperparámetros, comparación de los cinco modelos, evaluación única en el conjunto de prueba, análisis de errores con ejemplos, desempeño por subgrupos, importancia por permutación, conclusiones y limitaciones. |
+| `resultados/` | Hiperparámetros y métricas de validación cruzada (`*_integrante1` sale de `02_Baselines_Arbol.ipynb` y `*_integrante2` de `03_Modelos_Evaluacion.ipynb`) y las figuras del informe en `figuras/`. |
+| `data/` | Dataset original comprimido (`raw/`) y la partición compartida (`processed/particion.csv`). |
+| `scripts/descargar_datos.py` | Vuelve a descargar el dataset desde Kaggle y verifica su huella SHA-256. |
+
 ## Dataset
 
 | | |
@@ -36,6 +51,8 @@ python scripts/descargar_datos.py
 │   └── figuras/      # gráficas de 03_Modelos_Evaluacion.ipynb usadas en el informe
 ├── scripts/
 │   └── descargar_datos.py
+├── Informe-Proyecto2.docx       # informe final
+├── Presentacion-Proyecto2.pptx  # presentación
 └── requirements.txt
 ```
 
