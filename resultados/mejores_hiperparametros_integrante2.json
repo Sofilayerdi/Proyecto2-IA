@@ -1,0 +1,17 @@
+{
+  "random_forest": {
+    "min_samples_leaf": 10,
+    "max_features": 0.5,
+    "max_depth": 20,
+    "class_weight": "balanced_subsample"
+  },
+  "gradient_boosting": {
+    "min_samples_leaf": 20,
+    "max_leaf_nodes": 63,
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "class_weight": "balanced"
+  },
+  "modelo_final": "Random forest",
+  "f1_macro_test": 0.4379
+}
